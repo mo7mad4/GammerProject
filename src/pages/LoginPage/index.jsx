@@ -9,6 +9,8 @@ import "./style.css";
 import SocialMediaButtons from "./SocialMediaButtons";
 import OrLine from "../../components/OrLine";
 import LoginForm from "./LoginForm";
+import { Navigate, useNavigate } from 'react-router-dom';
+import { PATHS } from "../../router/pathes";
 
 const Login = () => {
   return (
@@ -42,8 +44,10 @@ const Login = () => {
         <LoginForm />
         <Body2 className="text-center text-gray-1">
           Don’t have an account?
-          <span className="link">
-          {/* <span className="link" onClick={() => this.props.move("signup")}> */}
+          {/* <span className="link"> */}
+          <span className="link" onClick={() => {
+            Navigate(PATHS.SIGNUP);
+          }}>
             Register
           </span>
         </Body2>

@@ -4,6 +4,7 @@ import SubmitButton from "../../../components/SubmitButton";
 import PasswordInput from "../../../components/PasswordInput";
 import { schema } from "../../../validation/loginValidation";
 import Alerts from "../../../components/Alerts";
+import { useAuthContext } from '../../../context/AuthContext';
 
 const LoginForm = () => {
 
@@ -13,6 +14,8 @@ const LoginForm = () => {
   //     errors : [],
   //     success:false
   // })
+  const { login, isLoading } = useAuthContext();
+
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -67,7 +70,7 @@ const LoginForm = () => {
         label="Enter your password"
         required
       />
-      <SubmitButton>login</SubmitButton>
+      <SubmitButton>{isLoading ? 'loading...' : 'submit'}</SubmitButton>
       {(success || errors.length > 0) && (
         <Alerts
           errors={errors}
