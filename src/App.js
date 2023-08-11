@@ -1,11 +1,9 @@
-// import Login from './pages/LoginPage';
-import Signup from './pages/Signup';
+import Router from './router';
 
 function App() {
   return (
     <div className="App">
-        {/* <Login /> */}
-        <Signup />
+      <Router />
     </div>
   );
 }
