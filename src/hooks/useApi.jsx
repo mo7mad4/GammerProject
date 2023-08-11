@@ -1,5 +1,5 @@
 import { useReducer } from "react";
-import users_reducer from "../reducer/UsersReduser";
+import users_reducer from "../redusers/UsersReducer";
 import { USERS_ACTIONS } from "../constants/UsersActions";
 import axios from "axios";
 import { AUTH_API } from "../config/api";

@@ -1,9 +1,9 @@
 import { useReducer } from 'react';
 import { ROLES } from '../constants';
-import { auth_reducer } from '../reducer/AuthReducer';
+import { auth_reducer } from '../redusers/AuthReducer';
 import { AUTH_ACTIONS } from '../constants/AuthActions';
 import axios from 'axios';
-import { AUTH_API } from '../config/api';
+import { AUTH_API } from '../config/api'
 import { AUTH_API_ENDPOINT } from '../router/pathes';
 
 const initialState = {

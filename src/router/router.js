@@ -1,7 +1,7 @@
 import { Navigate } from 'react-router-dom';
 import { PATHS } from './pathes';
 import LoginPage from '../pages/LoginPage';
-import SignupPage from '../pages/SignupPage';
+import SignupPage from '../pages/Signup';
 import ProfilePage from '../pages/ProfilePage';
 import UsersPage from '../pages/UsersPage';
 import GuestGuard from '../components/Guards/GuestGuard';
