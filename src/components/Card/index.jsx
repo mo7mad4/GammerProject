@@ -1,7 +1,7 @@
 /* eslint-disable eqeqeq */
 import React from 'react';
 import styles from './style.module.css';
-import { Typography } from '../Typography/indexDarkAndLight';
+import { Typography } from '../Typography';
 
 const Card = ({ bg, hero, title, text, name }) => {
   return (

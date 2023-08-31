@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './style.module.css';
-import { Typography } from '../Typography/indexDarkAndLight';
+import { Typography } from '../Typography';
 import { useThemeContext } from '../../context/ThemeContext';
 import { THEMES } from '../../constants';
 

@@ -1,17 +1,18 @@
 import { Navigate } from 'react-router-dom';
 import { PATHS } from './pathes';
-import LoginPage from '../pages/LoginPage';
-import SignupPage from '../pages/Signup';
-import ProfilePage from '../pages/ProfilePage';
-import UsersPage from '../pages/UsersPage';
-import GuestGuard from '../components/Guards/GuestGuard';
-import UserGuard from '../components/Guards/UserGaurd';
-import AdminGuard from '../components/Guards/AdminGuard';
-import NotFound from '../pages/NotFoundPage';
-import HomePage from '../pages/HomePage';
-import HomeContent from '../components/HomeContent';
+import { lazy } from 'react';
+const LoginPage = lazy(() => import('../pages/LoginPage'));
+const SignupPage = lazy(() => import('../pages/SignupPage'));
+const GamesPage = lazy(() => import('../pages/GamesPage'));
+const ProfilePage = lazy(() => import('../pages/ProfilePage'));
+const UsersPage = lazy(() => import('../pages/UsersPage'));
+const GamesOutlet = lazy(() => import('../components/GamesOutlet'));
+const GuestGuard = lazy(() => import('../components/Guards/GuestGuard'));
+const UserGuard = lazy(() => import('../components/Guards/UserGaurd'));
+const AdminGuard = lazy(() => import('../components/Guards/AdminGuard'));
+const NotFound = lazy(() => import('../pages/NotFound'));
 
-export const routes = (role) => [
+const authRoutes = [
   {
     path: PATHS.LOGIN,
     element: (
@@ -28,17 +29,20 @@ export const routes = (role) => [
       </GuestGuard>
     ),
   },
+];
+export const routes = [
+  ...authRoutes,
   {
     path: PATHS.HOME,
     element: (
       <UserGuard>
-        <HomePage />
+        <GamesPage />
       </UserGuard>
     ),
     children: [
       {
         index: true,
-        element: <HomeContent />,
+        element: <GamesOutlet />,
       },
       {
         path: PATHS.PROFILE,

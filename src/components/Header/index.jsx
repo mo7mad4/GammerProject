@@ -1,6 +1,6 @@
 import React from 'react';
-import './style.css';
-import { Typography } from '../Typography/indexDarkAndLight';
+import styles from './style.module.css';
+import { Typography } from '../Typography';
 import { Link } from 'react-router-dom';
 import { PATHS } from '../../router/pathes';
 import { useAuthContext } from '../../context/AuthContext';
@@ -8,14 +8,14 @@ import { useAuthContext } from '../../context/AuthContext';
 const Header = () => {
   const { user } = useAuthContext();
   return (
-    <header className='header'>
-      <div className='profile_name'>
+    <header className={styles.header}>
+      <div className={styles.profile_name}>
         <Typography variant={'h4'}>Welcome back,</Typography>
-        <Typography variant={'h4'}>{user?.name} ! </Typography>
+        <Typography variant={'h4'}>{user?.name}</Typography>
       </div>
-      <div className='profile_img'>
+      <div className={styles.profile_img}>
         <Link to={PATHS.PROFILE}>
-          <img src='assets/myprofile.jpg' alt='profile pic' />
+          <img src='assets/profile_img.jpg' alt='profile pic' />
         </Link>
       </div>
     </header>

@@ -5,6 +5,10 @@
   border-radius: 33px 25px 25px 35px;
   padding-right: 0.5rem;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  -webkit-border-radius: 33px 25px 25px 35px;
+  -moz-border-radius: 33px 25px 25px 35px;
+  -ms-border-radius: 33px 25px 25px 35px;
+  -o-border-radius: 33px 25px 25px 35px;
 }
 .div_light {
   background: #fbfbfb;
@@ -16,6 +20,10 @@
   width: 70px;
   height: 70px;
   border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 .green:hover {
   box-shadow: 0px 0px 6.300000190734863px 0px #17d924,
@@ -24,6 +32,10 @@
     0px 0px 88.19999694824219px 0px #17d924,
     0px 0px 151.1999969482422px 0px #17d924,
     0px 0px 264.6000061035156px 0px #17d924;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 .blue:hover {
   box-shadow: 0px 0px 6.300000190734863px 0px #1360dd,
@@ -51,6 +63,6 @@
 }
 .div h5 {
   color: #000;
-  font-family: 'Gilroy', sans-serif;
+  font-family: 'Gilroy';
   font-weight: 300;
 }

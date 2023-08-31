@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './style.module.css';
-import { Typography } from '../Typography/indexDarkAndLight';
+import { Typography } from '../Typography';
 import LastPlayedDiv from '../LastPlayedDiv';
 import { lastPlayed } from '../../mock/data';
 
