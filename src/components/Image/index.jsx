@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Image = ({ ImageSrc, handleShowPassword }) => {
+export default class Image extends Component {
+  render() {
+    const { ImageSrc, handleShowPassword } = this.props;
     return (
       <img
         src={ImageSrc}
@@ -9,4 +11,4 @@ const Image = ({ ImageSrc, handleShowPassword }) => {
       />
     );
   }
-export default Image
+}

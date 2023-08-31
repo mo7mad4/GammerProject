@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.css';
+import styles from './style.module.css';
 import Theme from '../Theme';
 import { Link } from 'react-router-dom';
 import { PATHS } from '../../router/pathes';
@@ -12,13 +12,13 @@ const Sidebar = () => {
   const { logout, user } = useAuthContext();
 
   return (
-    <aside className='sidebar'>
-      <div className='logo'>
+    <aside className={styles.sidebar}>
+      <div className={styles.logo}>
         <Link to={PATHS.HOME}>
-          <img src='assets/Game-two.svg' alt='logo' />
+          <img src='assets/Game-two.svg' className='' alt='logo' />
         </Link>
       </div>
-      <div className='logout_icon'>
+      <div className={styles.logout_icon}>
         {user?.isAdmin && (
           <Link to={PATHS.USERS}>
             <svg

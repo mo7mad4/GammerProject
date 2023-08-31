@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './style.module.css';
-import { Typography } from '../Typography/indexDarkAndLight';
+import { Typography } from '../Typography';
 import Container from '../Container';
 import Card from '../Card';
 import { newGames } from '../../mock/data';

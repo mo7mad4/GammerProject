@@ -6,7 +6,7 @@
   overflow: hidden;
 }
 .last_played h3 {
-  font-family: 'Gilroy', sans-serif;
+  font-family: 'Gilroy';
   font-weight: 800;
 }
 .last_played_children {
