@@ -4,24 +4,31 @@
   justify-content: center;
   flex-direction: column;
 }
-
-.error-code {
-  font-size: 120px;
-  color: #e74c3c;
-  margin: 0;
+.container img{
+  width: auto;
+  height: 500px;
 }
-
-.error-message {
-  font-size: 24px;
-  color: #333;
-  margin: 10px 0;
-}
-
 .back-link {
-  color: #3498db;
+  color: white;
   text-decoration: none;
 }
 
 .back-link:hover {
   text-decoration: underline;
+}
+
+button {
+  width: 100px;
+  height: 40px;
+  border: none;
+  background: #000000;
+  border-radius: 10px;  
+}
+
+button:hover {
+  width: 100px;
+  height: 40px;
+  border: none;
+  background: #313131;
+  border-radius: 10px;
 }
